@@ -1,4 +1,4 @@
-package p1;
+package p1.t2;
 
 import java.util.ArrayList;
 import java.util.Collections;

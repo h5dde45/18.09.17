@@ -1,10 +1,10 @@
-package p1;
+package p1.t1;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Test1 {
+public class T1 {
     public static void main(String[] args) {
 
         Scanner scanner=new Scanner(System.in);
