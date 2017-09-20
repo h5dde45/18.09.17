@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.TreeSet;
 
 
-class Navigator {
+public class Navigator {
 
     //стек дорог для поиска нужного направления
     LinkedList<Road> stackRoads = new LinkedList<>();
@@ -23,28 +23,32 @@ class Navigator {
 
     //поиск нужного пути
     int findingWay(List<City> cities, List<Road> allRoads,
-                    int indexCityOut, int indexCityIn, int distance) {
+                   int indexCityOut, int indexCityIn, int distance) {
         indexCurrentCity = indexCityOut;
         mainDirection = calculateDirection(cities, indexCurrentCity, indexCityIn);
-        System.out.println(mainDirection);
+//        System.out.println(mainDirection);
 
         //заполнение коллекции направлений из текущего города
+        directionsFromCity.clear();
         addRoads(allRoads, cities,distance);
 
-        System.out.println(directionsFromCity);
-        for (Road road : directionsFromCity) {
-            System.out.println(road.getDirection()+" = "+road.getDistance());
-        }
+//        System.out.println(directionsFromCity);
+//        for (Road road : directionsFromCity) {
+//            System.out.println(road.getDirection()+" = "+road.getDistance());
+//        }
 
         stackRoads.push(directionsFromCity.first());
-        System.out.println(stackRoads);
+        indexCurrentCity=stackRoads.element().getCityB();
 
+        if(indexCurrentCity!=indexCityIn){
+          findingWay(cities,allRoads,indexCurrentCity,indexCityIn,distance);
+        }
 
-
-        return 0;//findingWays(cities,allRoads,indexCurrentCity,indexCityIn,distance);
+//        System.out.println(stackRoads);
+        return stackRoads.size();
     }
 
-    private void addRoads(List<Road> roads, List<City> cities,double distance) {
+    private void addRoads(List<Road> roads, List<City> cities, double distance) {
         for (Road road : roads) {
             if (indexCurrentCity == road.getCityA()) {
                 road.setDirection(calculateDirection(cities, indexCurrentCity, road.getCityB()));

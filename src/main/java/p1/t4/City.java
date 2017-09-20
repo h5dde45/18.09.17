@@ -1,6 +1,6 @@
 package p1.t4;
 
-class City {
+public class City {
     //координаты города
     private int x;
     private int y;

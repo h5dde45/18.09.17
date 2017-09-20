@@ -1,7 +1,7 @@
 package p1.t4;
 
 
-class Road implements Comparable<Road> {
+public class Road implements Comparable<Road> {
 
     //индексы городов (cityA --> cityB)
     private int cityA;

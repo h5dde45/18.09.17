@@ -21,9 +21,9 @@ public class T2 {
                 t /= 10;
             }
 
-            n = k / s;
-            if (n > 0) {
-                list.add(n);
+//            n = k / s;
+            if (i%s!=0) {
+                list.add(i);
             }
         }
         Collections.sort(list);

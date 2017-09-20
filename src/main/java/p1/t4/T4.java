@@ -8,6 +8,12 @@ import java.util.Scanner;
 public class T4 {
     public static void main(String[] args) {
 
+        // нет возврата назад по стеку, и много разных недоделок
+        // смысл в том чтобы в каждом городе нужно выбирать направление
+        // близкое к направлению на конечный пункт
+        // если дорога заканчивается вернутся на один шаг
+        // назад и начать со следующего направления близкого к основному
+        // эти данные дают правильный путь
         /**
         10
         2 3
@@ -20,7 +26,7 @@ public class T4 {
         -4 6
         2 8
         -1 -4
-        7
+        8
         2 3
         */
 
@@ -52,10 +58,10 @@ public class T4 {
         //коллекция всех существующих дорог
         List<Road> allRoads = new ArrayList<>();
 
-        // иногда дороги заканчиваются в неожиданных местах
+        // добавление дорог
         roadCity(allRoads, counterCities, cities);
 
-        System.out.println(allRoads);
+//        System.out.println(allRoads);
 
         //поиск кротчайшего пути
         System.out.println(new Navigator().findingWay(cities, allRoads, indexCityOut, indexCityIn, distance));
@@ -67,8 +73,8 @@ public class T4 {
         for (int i = 0; i < counterCities; i++) {
             for (int j = 0; j < counterCities; j++) {
                 n = random.nextInt(100);
-                //условия вероятность 85%, без учета городских дорог, расстояние между городов меньше 8
-                if (n < 85 && i != j &&
+                // расстояние между городов меньше 8
+                if (n < 99 && i != j &&
                         (Math.sqrt(Math.pow(cities.get(j).getY() -
                                 cities.get(i).getY(), 2)
                                 + Math.pow(cities.get(j).getX() -
