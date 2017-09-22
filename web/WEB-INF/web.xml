@@ -6,6 +6,10 @@
     <servlet>
         <servlet-name>SecondServlet</servlet-name>
         <servlet-class>p1.t6.SecondServlet</servlet-class>
+        <init-param>
+            <param-name>init1</param-name>
+            <param-value>value1</param-value>
+        </init-param>
     </servlet>
     <servlet-mapping>
         <servlet-name>SecondServlet</servlet-name>
@@ -16,4 +20,6 @@
             30
         </session-timeout>
     </session-config>
+
+
 </web-app>

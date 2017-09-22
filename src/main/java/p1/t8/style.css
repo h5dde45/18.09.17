@@ -1,0 +1,12 @@
+body {background-color: bisque}
+h1 {color: blueviolet;font-family: Verdana;font-size: 160%}
+p{color: yellowgreen;font-family: Calibri;font-size: 122%}
+#p01{
+    color: turquoise;
+}
+p.error{
+    color: red;
+}
+p.new{
+    color: black;
+}
