@@ -1,0 +1,75 @@
+footer{
+    text-align: center;
+    background-color: red;
+    color: #dfbc33;
+    background: url("2.jpg") no-repeat center;
+    padding: 50px;
+    text-shadow: 2px 2px 3px #adc;
+    font-size: 30px;
+    clear: both;
+}
+aside{
+    float: right;
+    width: 25%;
+}
+article{
+    padding: 10px;
+    float: left;
+    width: 70%;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.main{
+    background: url("2.jpg")  no-repeat center;
+}
+.contact{
+    background: url("bld.jpg")  no-repeat center;
+}
+.about{
+    background: url("lib.png")  no-repeat center;
+}
+
+header {
+    text-align: center;
+    /*background-color: bisque;*/
+
+    padding: 50px 10px 30px 10px ;
+    width: 100%;
+}
+
+nav {
+    text-align: center;
+    text-transform: uppercase;
+    background-color: red;
+    /*position: fixed;*/
+    width: 100%;
+}
+
+a {
+    color: #dfbc33;
+    text-decoration: none;
+    padding: 40px;
+    font-size: 20px;
+}
+a:hover{
+    color: brown;
+}
+
+h1 {
+    color: #a5812b;
+    text-shadow: 2px 2px 3px #adc;
+    text-transform: uppercase;
+    font-size: 50px;
+}
+h1:hover{
+    color: #dfbc33;
+}
+li{
+    display: block;
+    padding-top: 20px;
+}
+li a:hover{
+    color: blueviolet;
+}
+
